@@ -30,8 +30,6 @@ except ImportError:
     raise RuntimeError("to build the documentation you need to be inside a Sage shell (run first the command 'sage -sh' in a shell")
 
 
-
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -146,7 +144,6 @@ source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
-
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -395,17 +392,19 @@ if (os.environ.get('SAGE_DOC_MATHJAX', 'no') != 'no'
     html_static_path.append(SAGE_SHARE + "/mathjax")  # sage distribution
     html_static_path.append(SAGE_LOCAL + "/lib/mathjax")    # conda
 else:
-     extensions.append('sphinx.ext.imgmath')
+    extensions.append('sphinx.ext.imgmath')
 
 # This is to make the verbatim font smaller;
 # Verbatim environment is not breaking long lines
 from sphinx.highlighting import PygmentsBridge
 from pygments.formatters.latex import LatexFormatter
 
+
 class CustomLatexFormatter(LatexFormatter):
     def __init__(self, **options):
         super(CustomLatexFormatter, self).__init__(**options)
         self.verboptions = r"formatcom=\footnotesize"
+
 
 PygmentsBridge.latex_formatter = CustomLatexFormatter
 

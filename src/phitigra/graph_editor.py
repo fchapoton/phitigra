@@ -153,7 +153,7 @@ class GraphEditor():
 
         No output, only side effects. Draws an arrow on the canvas.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this drawing function can hardly be tested::
 
@@ -827,9 +827,9 @@ class GraphEditor():
 
             This function does not redraw the graph.
 
-        TESTS::
+        TESTS:
 
-        Same as in :meth:`get_vertex_pos`.
+        Same as in :meth:`get_vertex_pos` ::
 
             sage: from phitigra import GraphEditor
             sage: ed = GraphEditor(Graph(1))
@@ -942,10 +942,11 @@ class GraphEditor():
 
 
         .. WARNING::
-            This function assumes that edges are straigh lines between
+
+            This function assumes that edges are straight lines between
             their endpoints.
 
-        EXAMPLES:
+        EXAMPLES::
 
             sage: from phitigra import GraphEditor
             sage: ed = GraphEditor(graphs.PathGraph(3))
@@ -1290,7 +1291,7 @@ class GraphEditor():
         :meth:`~GraphEditor.`get_vertex_color`.
         If ``highlight`` is true, also draw the focus on ``v``.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this drawing function can hardly be tested::
 
@@ -1335,7 +1336,7 @@ class GraphEditor():
         """
         Draw the edges incident to a vertex.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this drawing function can hardly be tested::
 
@@ -1369,9 +1370,9 @@ class GraphEditor():
 
         .. WARNING::
 
-        - The function does not check that ``e`` is an edge of ``self``;
+            The function does not check that ``e`` is an edge of ``self``;
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this drawing function can hardly be tested::
 
@@ -1496,7 +1497,7 @@ class GraphEditor():
 
         .. WARNING::
 
-        No check is done that `vertex` indeed is a vertex of the graph.
+            No check is done that `vertex` indeed is a vertex of the graph.
 
         TESTS::
 
@@ -1606,7 +1607,7 @@ class GraphEditor():
         - otherwise, the click was done on the canvas: record its position
           in order to later move the drawing when the mouse is moved.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this function can hardly be tested::
 
@@ -1975,8 +1976,8 @@ class GraphEditor():
         This function is called when a down click is done on the canvas.
         Depending on the current tool in use, call the appropriate function.
 
-
         INPUT:
+
         - ``click_x``, ``click_y`` -- integers;
           the coordinates of the click.
 
@@ -1984,7 +1985,7 @@ class GraphEditor():
 
         No output, just a call to the appropriate function.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this function can hardly be tested::
 
@@ -2026,6 +2027,7 @@ class GraphEditor():
         Depending on the current tool in use, call the appropriate function.
 
         INPUT:
+
         - ``click_x``, ``click_y`` -- integers;
           the coordinates of the mouse.
 
@@ -2033,7 +2035,7 @@ class GraphEditor():
 
         No output, just a call to the appropriate function.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this function can hardly be tested::
 
@@ -2073,6 +2075,7 @@ class GraphEditor():
         Depending on the current tool in use, call the appropriate function.
 
         INPUT:
+
         - ``click_x``, ``click_y`` -- integers;
           the coordinates of the click.
 
@@ -2080,7 +2083,7 @@ class GraphEditor():
 
         No output, just a call to the appropriate function.
 
-        TESTS::
+        TESTS:
 
         A dummy test, for this function can hardly be tested::
 
