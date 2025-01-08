@@ -829,7 +829,7 @@ class GraphEditor():
 
         TESTS:
 
-        Same as in :meth:`get_vertex_pos` ::
+        Same as in :meth:`get_vertex_pos`::
 
             sage: from phitigra import GraphEditor
             sage: ed = GraphEditor(Graph(1))
